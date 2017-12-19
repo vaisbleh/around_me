@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vaisbleh.user.reuvenvaisblehfinalproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.vaisbleh.user.reuvenvaisblehfinalproject.activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.vaisbleh.user.reuvenvaisblehfinalproject.activities.MapActivity" />
+        <activity android:name="com.vaisbleh.user.reuvenvaisblehfinalproject.activities.PrefActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyArt2mTo7jBW2kZ-JYugmrGFWCGAkQg1QI" />
+
+        <provider
+            android:name="com.vaisbleh.user.reuvenvaisblehfinalproject.db.PlacesProvider"
+            android:authorities="com.vaisbleh.user.reuvenvaisblehfinalproject.places"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name="com.vaisbleh.user.reuvenvaisblehfinalproject.services_asynctasks.SearchService"
+            android:exported="false" />
+
+        <activity android:name="com.vaisbleh.user.reuvenvaisblehfinalproject.activities.SearchActivity" android:parentActivityName="com.vaisbleh.user.reuvenvaisblehfinalproject.activities.MainActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="My.Lite.NoAction.Bar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:navigationBarColor">@color/common_google_signin_btn_text_dark_default
+        </item>
+    </style>
+</resources>

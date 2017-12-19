@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="@string/meters"
+        android:entries="@array/units"
+        android:entryValues="@array/units"
+        android:key="units"
+        android:title="@string/choose_distance_units" />
+    <EditTextPreference
+        android:defaultValue="500"
+        android:inputType="number"
+        android:key="radius"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="enter radius to search (meter)" />
+</PreferenceScreen>
